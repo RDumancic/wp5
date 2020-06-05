@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CFC - New Challenger</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <script src="src/create-cat.js"></script>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-10 ">
+                <h2>CFC 3 - ADD NEW FIGHTER</h2>
+            </div>
+            <div class="col-sm-2 text-right">
+                <a href="index.html" class="btn btn-primary">>>> Go Back</a>
+            </div>
+        </div>
+        <div>
+            <form id="newForm" name="CatForm">
+                <div class="form-group row">
+                    <label for="name" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="name" name="name" required maxlength="64">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="age" class="col-sm-2 col-form-label">Age</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" id="age" name="age" required min="0" step="1">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="info" class="col-sm-2 col-form-label">Cat info</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="info" name="info" maxlength="256">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label for="wins" class="col-md-4 col-sm-2 col-form-label">Wins</label>
+                            <div class="col-md-8 col-sm-10">
+                                <input type="number" class="form-control" id="wins" name="wins" required min="0" step="1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label for="loss" class="col-md-4 col-sm-2 col-form-label">Loss</label>
+                            <div class="col-md-8 col-sm-10">
+                                <input type="number" class="form-control" id="loss" name="loss" required min="0" step="1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="image" class="col-sm-2 col-form-label">Cat image</label>
+                    <div class="col-sm-10">
+                        <input type="file" class="form-control-file" id="image" name="image" accept="image/*">
+                    </div>
+                </div>
+                <input type="submit" value="Create" class="btn btn-success" id="submitBtn">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

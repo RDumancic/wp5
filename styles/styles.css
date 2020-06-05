@@ -1,0 +1,12 @@
+.fighter-box {
+    box-sizing: border-box;
+    background-color: lightgrey;
+    width: 150px;
+    height: 150px;
+}
+
+.cat-thumbnail {
+    box-sizing: border-box;
+    width: 150px;
+    height: 150px;
+}

@@ -8,7 +8,7 @@ function createCat(e) {
     request.onreadystatechange = function() {
         if (this.readyState == 4) {
             if(this.status == 200) {
-                window.location.href="index.html";
+                window.location.href="index.php";
             } else {
                 document.querySelector("#submitBtn").disabled = false;
             }
@@ -51,7 +51,7 @@ function _deleteCat() {
     request.onreadystatechange = function() {
         if (this.readyState == 4) {
             if(this.status == 200) {
-                window.location.href="index.html";
+                window.location.href="index.php";
             } else {
                 document.querySelector("#submitBtn").disabled = false;
                 document.querySelector("deleteBtn").disabled = false;

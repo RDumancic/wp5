@@ -125,7 +125,6 @@ class CFC {
                 j = Math.round(Math.random() * this.cats.length);
             }
 
-            //god bless stack overflow
             if(this.firstSide != null) {
                 document.querySelector("#rightCats").children[this.firstSide].children[0].setAttribute("class", "");
                 document.querySelector("#leftCats").children[this.firstSide].children[0].setAttribute("class", "");
@@ -134,10 +133,8 @@ class CFC {
                 document.querySelector("#leftCats").children[this.secondSide].children[0].setAttribute("class", "");
                 document.querySelector("#rightCats").children[this.secondSide].children[0].setAttribute("class", "");
             }
-            document.querySelector("#rightCats").children[j].children[0].setAttribute("class", "chosen");
             document.querySelector("#leftCats").children[j].children[0].setAttribute("class", "already-chosen");
             document.querySelector("#rightCats").children[i].children[0].setAttribute("class", "already-chosen");
-            document.querySelector("#leftCats").children[i].children[0].setAttribute("class", "chosen");
 
             this._setFeatured( 1, i);
             this._setFeatured( 2, j);
@@ -233,7 +230,6 @@ class CFC {
                     if(i != this.firstSide && i != this.secondSide) {
                         this._setFeatured(1, i);
                         document.querySelector("#rightCats").children[i].children[0].setAttribute("class", "already-chosen");
-                        document.querySelector("#leftCats").children[i].children[0].setAttribute("class", "chosen");
                         if(this.firstSide != null) {
                             document.querySelector("#rightCats").children[this.firstSide].children[0].setAttribute("class", "");
                             document.querySelector("#leftCats").children[this.firstSide].children[0].setAttribute("class", "");
@@ -256,7 +252,6 @@ class CFC {
                     let i = JSON.parse(event.target.parentNode.getAttribute("data-idx"));
                     if(i != this.firstSide && i != this.secondSide) {
                         this._setFeatured(2, i);
-                        document.querySelector("#rightCats").children[i].children[0].setAttribute("class", "chosen");
                         document.querySelector("#leftCats").children[i].children[0].setAttribute("class", "already-chosen");
                         if(this.secondSide != null) {
                             document.querySelector("#rightCats").children[this.secondSide].children[0].setAttribute("class", "");

@@ -23,7 +23,7 @@ if(isset($_POST["name"]) && isset($_POST["age"]) && isset($_POST["info"]) && iss
     $neko->pos = $dir . uniqid(rand(), true) . "_" . $_FILES["image"]["name"];
   
     // create the product
-    if($product->create()) {
+    if($neko->create()) {
         if (move_uploaded_file($_FILES["image"]["_name"], SITE_ROOT . "/" . $neko->pos)) {
             http_response_code(201);
             echo json_encode(array("message" => "Neko was created."));
